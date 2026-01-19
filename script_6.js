@@ -20,9 +20,9 @@ function decoupeCodons(arn) {
 
 function traduireARN(arn) {
   const codons = decoupeCodons(arn);
-  const proteine = codons.map(codon => {
+  const proteine = codons.map(letters => {
     for (let acide in codeGenetique) {
-      if (codeGenetique[acide].includes(codon)) {
+      if (codeGenetique[acide].includes(letters)) {
         return acide;
       }
     }
